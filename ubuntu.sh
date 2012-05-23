@@ -1,13 +1,15 @@
 #! /bin/bash
 
 # Ruby Dependencies
-sudo apt-get -y install git-core curl 
+sudo apt-get -y install git-core
 
 # Install rbenv
 echo "INSTALLING RBENV"
 curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv
 echo 'eval "$(rbenv init -)"' >> ~/.zshenv
+exec $SHELL
+
 rbenv bootstrap-ubuntu-12-04
 
 # Install ruby
