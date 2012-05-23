@@ -12,6 +12,7 @@ if [[ -d $HOME/.rbenv ]]; then
 fi
 exec $SHELL
 
+chmod u+x ~/.rbenv/plugins/rbenv-installer/bin/rbenv-bootstrap-ubuntu-12-04
 rbenv bootstrap-ubuntu-12-04
 
 # Install ruby
