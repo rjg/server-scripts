@@ -1,11 +1,5 @@
 #! /bin/bash
 
-# Load ruby
-if [[ -d $HOME/.rbenv ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
 # Dependencies for vim
 echo "INSTALLING DEPENDENCIES TO COMPILE VIM WITH RUBY"
 sudo apt-get -y install libncurses-dev libgnome2-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev
@@ -20,3 +14,4 @@ cd ~/downloads/vim73
 make
 sudo make install
 sudo make clean
+exec $SHELL
