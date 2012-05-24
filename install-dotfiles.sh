@@ -1,13 +1,13 @@
 #! /bin/bash
 
-# Load ruby
-sudo apt-get -y install ruby1.9.1
+# Install ruby and git
+sudo apt-get -y install ruby1.9.1 git-core
 
-# Installing Rake
+# Installing Rake and Bundler
 sudo gem install rake # Dep for dotfile install script 
 sudo gem install bundler # Dep for command-t install
 
-# install hub
+# Install hub
 echo "INSTALLING HUB"
 mkdir ~/bin
 curl http://defunkt.io/hub/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
@@ -17,7 +17,7 @@ echo "INSTALLING DOTFILES"
 mkdir ~/code && cd ~/code
 git clone https://github.com/rjg/dotfiles
 cd ~/code/dotfiles
-git checkout -t remote/linode
+git checkout -t origin/linode
 rake install
 
 # Nokogiri requirements
