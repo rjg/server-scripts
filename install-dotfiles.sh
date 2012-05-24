@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# Install ruby and git
+# Install ruby, git, and make
 sudo apt-get -y install ruby1.9.1-dev git-core make
 
 # Installing Rake and Bundler
