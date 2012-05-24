@@ -15,6 +15,9 @@ git checkout -t remote/linode
 rake install
 exec $SHELL
 
+# nokogiri requirements
+sudo apt-get -y install libxslt-dev libxml2-dev
+
 # Getting vim plugins
 cd ~/code/dotfiles/vim/ && rm -rf bundle && mkdir bundle && cd bundle
 git clone tpope/vim-surround 
