@@ -1,10 +1,9 @@
 #! /bin/bash
 
-# Ruby Dependencies
-sudo apt-get -y install git-core
+# Rbenv Dependencies
+sudo apt-get -y install git-core make
 
 # Install rbenv
-echo "INSTALLING RBENV"
 curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 if [[ -d $HOME/.rbenv ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
