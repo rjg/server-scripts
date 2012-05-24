@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Load ruby
+if [[ -d $HOME/.rbenv ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
 # install hub
 echo "INSTALLING HUB"
 mkdir ~/bin
