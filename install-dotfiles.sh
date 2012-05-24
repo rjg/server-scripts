@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Install ruby and git
-sudo apt-get -y install ruby1.9.1 git-core
+sudo apt-get -y install ruby1.9.1-dev git-core make
 
 # Installing Rake and Bundler
 sudo gem install rake # Dep for dotfile install script 
@@ -21,7 +21,7 @@ git checkout -t origin/linode
 rake install
 
 # Nokogiri requirements
-sudo apt-get -y install libxslt-dev libxml2-dev
+sudo apt-get -y install libxml2 libxml2-dev libxslt1-dev
 
 # Getting vim plugins
 cd ~/code/dotfiles/vim/ && rm -rf bundle && mkdir bundle && cd bundle
@@ -34,7 +34,7 @@ git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/tpope/vim-rails
 git clone https://github.com/wincent/Command-T command-t
 cd ~/code/dotfiles/vim/bundle/command-t
-bundle install --path vendor/bundle
+sudo bundle install --path vendor/bundle
 rake make
 
 exec $SHELL
